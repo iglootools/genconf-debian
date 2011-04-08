@@ -1,3 +1,9 @@
+genconf (0.2-0ubuntu2) maverick; urgency=low
+
+  * Migrated the package to git-buildpackage
+
+ -- Sami Dalouche <sami.dalouche@gmail.com>  Fri, 08 Apr 2011 15:16:43 -0400
+
 genconf (0.2-0ubuntu1) maverick; urgency=low
 
   * Upstream version upgraded to 0.2
