@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: genconf
+Version: 0.2
+Summary: A simple-to-use, template-based configuration file generator
+Home-page: http://www.iglootools.org/genconf
+Author: Sami Dalouche
+Author-email: sami.dalouche@gmail.com
+License: Apache-2.0
+Description: genconf generates configuration files from a template.It is meant to be used inside software projects that need different config filesdepending on which environment is running for instance.
+Platform: UNKNOWN
