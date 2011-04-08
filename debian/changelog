@@ -1,0 +1,11 @@
+genconf (0.2-0ubuntu1) maverick; urgency=low
+
+  * Upstream version upgraded to 0.2
+
+ -- Sami Dalouche <sami.dalouche@gmail.com>  Fri, 08 Apr 2011 14:46:42 -0400
+
+genconf (0.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Sami Dalouche <sami.dalouche@gmail.com>  Fri, 08 Apr 2011 11:13:07 -0400

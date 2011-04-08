@@ -1,0 +1,22 @@
+Source: genconf
+Section: devel
+Priority: extra
+Maintainer: Sami Dalouche <sami.dalouche@gmail.com>
+Build-Depends: cdbs, debhelper (>= 7.0.50~), quilt, python, python-setuptools (>= 0.6.14), python-support (>= 1.0.4)
+Standards-Version: 3.8.4
+Homepage: http://www.iglootools.org/genconf
+#Vcs-Git: git://git.debian.org/collab-maint/genconf.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/genconf.git;a=summary
+
+Package: genconf
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-pkg-resources (>=0.6.14), python-yaml (>=3.09), python-genshi (>=0.6), python-argparse (>= 1.1)
+Description: A simple-to-use, template-based configuration file generator
+ genconf is meant to be used inside software projects that need different config files
+ depending on which environment is running for instance.
+ .
+ Its simple to use command-line interface allows genconf to be used in various kinds of 
+ software development projects, regardless of their langage.
+ .
+ It uses the genshi templating engine and a yaml-based configuration file to generate 
+ files for every declared profile
