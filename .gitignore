@@ -6,4 +6,4 @@
 dist/
 build/
 *.egg-info/
-distribute*.tar.gz
+distribute*.tar.gz*
