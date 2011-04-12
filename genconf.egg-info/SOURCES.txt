@@ -8,9 +8,14 @@ gc
 setup.py
 examples/gc
 examples/genconf-manifest.yaml
-examples/target/sometext
+examples/manifest-syntax-error.yaml
+examples/overrides.yaml
 examples/target/development/jdbc.properties
 examples/target/development/some.xml
+examples/target/development/sometext
+examples/target/test/jdbc.properties
+examples/target/test/some.xml
+examples/target/test/otherdir/sometext
 examples/templates/jdbc.properties
 examples/templates/some.xml
 examples/templates/sometext
@@ -24,6 +29,9 @@ genconf.egg-info/dependency_links.txt
 genconf.egg-info/requires.txt
 genconf.egg-info/top_level.txt
 genconf/filegenerator/__init__.py
+genconf/filegenerator/_defaulterrorlistener.py
+genconf/filegenerator/_defaulteventlistener.py
+genconf/filegenerator/_filegenerator.py
 genconf/manifest/__init__.py
 genconf/manifest/_manifest.py
 genconf/manifest/_outputfile.py
@@ -37,6 +45,8 @@ tests/genconftests/manifest/__init__.py
 tests/genconftests/manifest/test_manifest.py
 tests/genconftests/manifest/test_manifestparsing.py
 tests/genconftests/manifest/test_outputfile.py
+tests/genconftests/manifest/test_overridesparsing.py
 tests/genconftests/manifest/test_profile.py
 tests/genconftests/samples/__init__.py
+tests/genconftests/samples/simple-overrides.yaml
 tests/genconftests/samples/simple.yaml
