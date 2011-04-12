@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: genconf
-Version: 0.2
+Version: 0.4
 Summary: A simple-to-use, template-based configuration file generator
 Home-page: http://www.iglootools.org/genconf
 Author: Sami Dalouche

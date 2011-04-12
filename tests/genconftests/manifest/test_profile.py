@@ -15,16 +15,25 @@
 """
 
 import unittest
-from genconf.manifest._profile import NUMBER_OF_AUTO_GENERATED_PROPERTIES
+from genconf.manifest._profile import NUMBER_OF_AUTO_GENERATED_PROPERTIES, Profile
 from tests.genconftests.samples import development_profile, all_profile 
 
 class ProfileTestCase(unittest.TestCase):
     
     def setUp(self):
         unittest.TestCase.setUp(self)
-    
+        
     def test_should_override_properties(self):
-        assert development_profile.properties['web_infrastructure_database_url'] == 'jdbc:postgresql://localhost/igloofinder_dev'
+        profile = Profile('development', 
+            properties={
+                'web_infrastructure_database_url': 'jdbc:postgresql://localhost/igloofinder_dev',
+                'web_infrastructure_database_login': 'dev_db_login'
+            }, 
+            overrides={
+                'web_infrastructure_database_login': 'my-login-override'
+           })
+        
+        assert profile.properties['web_infrastructure_database_login'] == 'my-login-override'
         
     def test_should_inherit_properties(self):
         assert len(development_profile.properties) == 3 + NUMBER_OF_AUTO_GENERATED_PROPERTIES
@@ -39,3 +48,7 @@ class ProfileTestCase(unittest.TestCase):
     def test_properties_should_contain_automatic_entries(self):
         assert development_profile.properties['profile'] == 'development'
         assert all_profile.properties["profile"] == "all"
+        assert development_profile.properties['truefalse'](True) == 'true'
+        assert development_profile.properties['truefalse'](False) == 'false'
+        assert development_profile.properties['either'](True, 'val1', 'val2') == 'val1'
+        assert development_profile.properties['either'](False, 'val1', 'val2') == 'val2'

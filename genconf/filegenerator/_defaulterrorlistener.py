@@ -13,21 +13,10 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 """
-
-import unittest
-from tests.genconftests import samples
-
-class ManifestTestCase(unittest.TestCase):
-    
-    def setUp(self):
-        unittest.TestCase.setUp(self)
-    
-    def test_should_get_all_concrete_profiles(self):
-        assert set([p.name for p in samples.simple_manifest.concrete_profiles()]) == set(["development"]) 
-    
-    def test_should_have_project(self):
-        assert samples.simple_manifest.project == 'simple'
-    
-    
-    
-
+class DefaultErrorListener(object):
+    def on_template_not_found(self, template_not_found_exception):
+        pass
+    def on_template_processing_error(self, template_processing_exception):
+        pass
+    def on_write_error(self, target_path, ex):
+        pass

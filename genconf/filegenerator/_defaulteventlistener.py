@@ -13,21 +13,12 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 """
-
-import unittest
-from tests.genconftests import samples
-
-class ManifestTestCase(unittest.TestCase):
-    
-    def setUp(self):
-        unittest.TestCase.setUp(self)
-    
-    def test_should_get_all_concrete_profiles(self):
-        assert set([p.name for p in samples.simple_manifest.concrete_profiles()]) == set(["development"]) 
-    
-    def test_should_have_project(self):
-        assert samples.simple_manifest.project == 'simple'
-    
-    
-    
-
+class DefaultEventListener(object):
+    def on_before_profile(self, profile):
+        pass
+    def on_after_profile(self, profile):
+        pass
+    def on_before_file_update(self, filename):
+        pass
+    def on_after_file_update(self, filename, content):
+        pass
